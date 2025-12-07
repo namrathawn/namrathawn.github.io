@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Projects – Namratha W.N</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Page background (soft warm yellow) */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #FFE9A7;
+      min-height: 100vh;
+    }
+
+    /* Particles (subtle amber dots) */
+    #particles {
+      position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1;
+      background: radial-gradient(circle, rgba(243, 156, 18, 0.06) 2px, transparent 2px);
+      background-size: 40px 40px;
+    }
+
+    /* Navigation Bar (amber) */
+    .navbar {
+      background: linear-gradient(90deg, #F39C12, #F5B300, #F39C12);
+      border-radius: 0; margin-bottom: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: none;
+    }
+    .navbar-inverse .navbar-nav > li > a {
+      font-size: 16px; font-weight: 600; letter-spacing: 0.5px;
+      color: #6B3E0B !important; transition: all 0.3s;
+    }
+    .navbar-inverse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-nav > .active > a,
+    .navbar-inverse .navbar-nav > .active > a:hover,
+    .navbar-inverse .navbar-nav > .active > a:focus {
+      color: #FFF6E0 !important; background-color: transparent !important; transform: translateY(-2px);
+    }
+
+    /* Container */
+    .projects-container { max-width: 1200px; margin: auto; padding: 40px 20px; }
+    .projects-container h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 42px; color: #413612; /* teal-darker for heading accent */
+      text-align: center; margin-bottom: 40px;
+    }
+
+    /* Grid */
+    .projects-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px;
+    }
+
+    /* Cards remain white for consistency */
+    .project-card {
+      position: relative; background: #FFFFFF; border-radius: 14px; overflow: hidden;
+      box-shadow: 0 8px 25px rgba(243, 156, 18, 0.18);
+      border: 2px solid rgba(245, 179, 0, 0.35);
+      transition: all 0.3s ease; cursor: pointer; height: 350px;
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 35px rgba(243, 156, 18, 0.28);
+      border-color: rgba(245, 179, 0, 0.5);
+    }
+    .project-image { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Title overlay uses teal accent */
+    .project-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(179, 173, 14, 0.95), rgba(158, 136, 12, 0.75));
+      padding: 25px; transition: all 0.3s ease;
+    }
+    .project-card:hover .project-overlay {
+      background: linear-gradient(to top, rgba(172, 238, 128, 0.98), rgba(88, 188, 26, 0.85));
+    }
+    .project-title {
+      font-family: 'Oswald', sans-serif; font-size: 24px; font-weight: 600; color: #ffffff; margin: 0 0 6px 0;
+    }
+    .project-status { font-size: 14px; font-style: italic; color: #E9FFF4; margin-bottom: 0; }
+    .project-arrow { display: inline-block; margin-left: 8px; transition: transform 0.3s ease; }
+    .project-card:hover .project-arrow { transform: translateX(5px); }
+
+    @media (max-width: 768px) {
+      .projects-grid { grid-template-columns: 1fr; gap: 20px; }
+      .projects-container { padding: 30px 15px; }
+      .projects-container h1 { font-size: 36px; }
+      .project-card { height: 280px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Particle Background -->
+<div id="particles"></div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="projects.html">Projects</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="cv.html">CV</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Projects Content -->
+<div class="projects-container">
+  <h1>Research Projects</h1>
+
+  <div class="projects-grid">
+    
+    <!-- Project 1 -->
+    <a href="project1.html" class="project-card">
+      <img src="green_hydrogen.png" alt="Project 1" class="project-image">
+      <div class="project-overlay">
+        <h3 class="project-title">Green Hydrogen Production <span class="project-arrow">→</span></h3>
+        <p class="project-status">Ongoing</p>
+      </div>
+    </a>
+
+ 
+    <!-- Project 4 -->
+    <a href="project4.html" class="project-card">
+      <img src="project4.jpg" alt="Project 4" class="project-image">
+      <div class="project-overlay">
+        <h3 class="project-title">X-ray Absorption Spectroscopy <span class="project-arrow">→</span></h3>
+      <p class="project-status">Ongoing</p>
+      </div>
+    </a>
+    <!-- Project 3 -->
+    <a href="project3.html" class="project-card">
+      <img src="Carbon dots_1.png" alt="Project 3" class="project-image">
+      <div class="project-overlay">
+        <h3 class="project-title">Carbon dots <span class="project-arrow">→</span></h3>
+      </div>
+    </a>
+   <!-- Project 2 -->
+    <a href="project2.html" class="project-card">
+      <img src="project2.jpg" alt="Project 2" class="project-image">
+      <div class="project-overlay">
+        <h3 class="project-title">Non-linear optical materials <span class="project-arrow">→</span></h3>
+        
+      </div>
+    </a>
+
+
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+:root{
+  --bg-mint:#ebf9b7;
+  --bg-warm:#FFE9A7;
+  --amber1:#F39C12;
+  --amber2:#F5B300;
+  --text-brown:#6B3E0B;
+  --teal:#16552f;
+}
+
+/* Default background for project detail pages */
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:var(--bg-mint);
+  min-height:100vh;
+}
+
+/* Optional dotted backdrop */
+#particles{
+  position:fixed; inset:0; z-index:-1;
+  background:radial-gradient(circle, rgba(26,188,156,.06) 2px, transparent 2px);
+  background-size:40px 40px;
+}
+
+/* Amber navbar shared across pages */
+.navbar{
+  background:linear-gradient(90deg, var(--amber1), var(--amber2), var(--amber1));
+  border:none; border-radius:0; margin-bottom:0;
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+.navbar-inverse .navbar-nav>li>a{
+  font-weight:600; letter-spacing:.5px; color:var(--text-brown) !important; transition:.3s;
+}
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>.active>a:focus{
+  color:#FFF6E0 !important; background:transparent !important; transform:translateY(-2px);
+}
+
+/* White content panel and teal accents */
+.project-detail-container{
+  max-width:900px; margin:40px auto; padding:50px 60px;
+  background:#fff; border-radius:22px;
+  box-shadow:0 20px 50px rgba(243,156,18,.18);
+  border:3px solid rgba(245,179,0,.35);
+}
+.back-link{color:var(--teal); font-weight:600; text-decoration:none;}
+.back-link:hover{color:#148F77;}
+h1{font-family:'Oswald',sans-serif; font-size:42px; color:var(--teal); margin-bottom:20px;}
+h2{font-family:'Oswald',sans-serif; font-size:28px; color:var(--teal); margin:35px 0 15px;}
+h3{font-size:22px; color:#148F77; font-weight:600; margin:25px 0 12px;}
+p,ul,ol{font-size:16px; line-height:1.8; color:#333;}
+.highlight-box{background:rgba(26,188,156,.08); border-left:4px solid var(--teal); padding:20px; border-radius:8px; margin:25px 0;}
+
+/* Style for paper titles in quotes */
+.paper-title {
+  color: #148F77;
+  font-weight: 500;
+}
+
+/* Adjust bullet points position */
+.project-detail-container ul {
+  padding-left: 25px;
+  margin-left: 0;
+}
+
+.project-detail-container ul li {
+  padding-left: 5px;
+}
+
+/* Different color for paper titles */
+.project-detail-container ul li em {
+  color: var(--teal);
+  font-style: italic;
+  font-weight: 500;
+}
+
+@media (max-width:768px){
+  .project-detail-container{margin:20px 15px; padding:30px 25px;}
+  h1{font-size:32px;} h2{font-size:24px;}
+}

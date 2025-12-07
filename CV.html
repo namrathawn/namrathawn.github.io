@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CV - Namratha W.N</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fdd777, #fff0b4, #fef9c3, #fbff95, #fbbf24);
+      background-size: 400% 400%;
+      animation: gradientShift 10s ease infinite;
+      min-height: 100vh;
+    }
+
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    /* Amber navbar matching home page */
+    .navbar {
+      background: linear-gradient(90deg, #F39C12, #F5B300, #F39C12);
+      border: none;
+      border-radius: 0;
+      margin-bottom: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+      font-weight: 600;
+      letter-spacing: .5px;
+      color: #6B3E0B !important;
+      transition: .3s;
+    }
+
+    .navbar-inverse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-nav > .active > a,
+    .navbar-inverse .navbar-nav > .active > a:hover,
+    .navbar-inverse .navbar-nav > .active > a:focus {
+      color: #FFF6E0 !important;
+      background: transparent !important;
+      transform: translateY(-2px);
+    }
+
+    /* Content container with scroll */
+    .cv-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 50px 60px;
+      background: rgba(255, 255, 255, 0.98);
+      border-radius: 22px;
+      box-shadow: 0 20px 50px rgba(243, 156, 18, 0.18);
+      border: 3px solid rgba(245, 179, 0, 0.35);
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+    }
+
+    /* Custom scrollbar */
+    .cv-container::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .cv-container::-webkit-scrollbar-track {
+      background: #FEF3C7;
+      border-radius: 10px;
+    }
+
+    .cv-container::-webkit-scrollbar-thumb {
+      background: #F39C12;
+      border-radius: 10px;
+    }
+
+    .cv-container::-webkit-scrollbar-thumb:hover {
+      background: #d97706;
+    }
+
+    h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 36px;
+      color: #792f0f;
+      margin-bottom: 10px;
+    }
+
+    .contact-info {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 24px;
+      color: #9c3e0e;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #F5B300;
+      padding-bottom: 8px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: linear-gradient(90deg, #F39C12, #F5B300);
+      color: #6B3E0B;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      transition: all 0.3s;
+      box-shadow: 0 4px 10px rgba(243, 156, 18, 0.3);
+    }
+
+    .download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(243, 156, 18, 0.4);
+      color: #FFF6E0;
+      text-decoration: none;
+    }
+
+    ul {
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    strong {
+      color: #9c3e0e;
+    }
+
+    .institution {
+      font-weight: 600;
+      color: #333;
+      font-size: 16px;
+    }
+
+    .degree {
+      font-weight: 500;
+      color: #555;
+    }
+
+    .date {
+      color: #888;
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      .cv-container {
+        margin: 20px 15px;
+        padding: 30px 25px;
+        max-height: calc(100vh - 80px);
+      }
+      h2 {
+        font-size: 28px;
+      }
+      h3 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="publications.html">Publications</a></li> 
+        <li class="active"><a href="cv.html">CV</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="cv-container">
+  <h2>Namratha W.N.</h2>
+  <div class="contact-info">
+    📧 wn.namratha@gmail.com | 📱 +91-9480705608
+  </div>
+  
+  <a href="Namratha_CV.pdf" class="download-btn" download>📥 Download Full CV (PDF)</a>
+
+  <h3>Education</h3>
+  <ul>
+    <li>
+      <span class="institution">University of Padova</span> (Padova, Italy)<br>
+      <span class="degree">PhD in Physics</span> <span class="date">(Oct 2023 – Present)</span><br>
+      Focus: Functional oxides for green hydrogen production using synchrotron techniques
+    </li>
+    <li>
+      <span class="institution">Christ Deemed to be University</span> (Bengaluru, India)<br>
+      <span class="degree">M.Sc. in Physics (Material Science Specialization)</span> <span class="date">(2020 – 2022)</span><br>
+      Thesis Supervisor: Dr. Manoj Balachandran
+    </li>
+    <li>
+      <span class="institution">Alva's College</span> (Moodbidri, India)<br>
+      <span class="degree">B.Sc. in Physics, Chemistry, and Mathematics</span> <span class="date">(2017 – 2020)</span><br>
+       Thesis Supervisor: Dr. Manoj Balachandran
+    </li>
+  </ul>
+
+  <h3>Professional Experience</h3>
+  <ul>
+    <li>
+      <strong>Project Research Assistant</strong> <span class="date">(Oct 2022 – Aug 2023)</span><br>
+      Combustion, Gasification and Propulsion Laboratory (CGPL)<br>
+      Indian Institute of Science (Bengaluru, India)
+    </li>
+  </ul>
+
+  <h3>Publications</h3>
+  <ul>
+    <li>Namratha, W. N. et al. (2024). "Titania-doped CDs as effective CT-DNA binders: A novel fluorescent probe via green synthesis." <em>Particle & Particle Systems Characterization</em>.</li>
+    
+    <li>Sreehari, K.S., Namratha, W.N. et al. (2022). "Toxic heavy metal ion detection by fluorescent nanocarbon sensor derived from a medicinal plant." <em>Results in Chemistry</em>.</li>
+    
+    <li>Satheeshchandra, S.; Namratha, W.N. et al. (2020). "Novel methyl furan-based chalcone material for potential nonlinear optical applications." <em>Materials Today: Proceedings</em>.</li>
+    
+    <li>Satheeshchandra, S.; Namratha, W.N. et al. (2020). "Third-order nonlinear optical properties of novel furan-based organic crystal." <em>Materials Today: Proceedings</em>.</li>
+    
+    <li>Suhana et al., Namratha, W.N. et al. (2025). "Exploring the Potential of Ni-Ru MOFs for Overall Water-Splitting Applications." <em>(Manuscript in preparation)</em></li>
+  </ul>
+
+  <h3>Patents</h3>
+  <ul>
+    <li><strong>A process of synthesizing novel methyl substituted chalcone molecules – potential cancer inhibitors</strong><br>
+    Patent No. 201941046359, India (2019)</li>
+  </ul>
+
+  <h3>Research Experience</h3>
+  <ul>
+    <li><strong>X-ray Absorption Spectroscopy</strong> – University of Padova (2023–Present)<br>
+    Study of functional nanomaterials by synchrotron studies. Guide: Assoc. Prof. Chiara Maurizio</li>
+    
+    <li><strong>Project Assistant</strong> – CGPL, IISc, Bengaluru (2022–2023)<br>
+    Biomass derived hydrogen testing and fuel cell operation. Guide: Dr. Anand Shivpuji</li>
+    
+    <li><strong>Carbon Nanomaterials from Biomass</strong> – Christ University (2021–2022)<br>
+    Optical and electrochemical properties. Guide: Dr. Manoj B.</li>
+    
+    <li><strong>Research Internship</strong> – AIET (2019)<br>
+    Role of Catalyst and catalytic activity in hydrogen fuel cell. Guides: Dr. Richard Pinto & Dr. Jayram A.</li>
+    
+    <li><strong>Research Internship</strong> – AIET (2019)<br>
+    Synthesis and characterization of furan-based Chalcone derivatives. Guides: Dr. Richard Pinto & Dr. Jayram A.</li>
+  </ul>
+
+  <h3>Conferences and Workshops</h3>
+  <ul>
+    <li><strong>International School of Electrocatalysis 2025 (ISECAT2025)</strong><br>
+    23rd – 25th July 2025, Padova, Italy</li>
+    <li><strong>Best Poster</strong> – Advanced Materials Workshop, University of L'Aquila, Italy (2024)</li>
+    <li><strong>Best Paper</strong> – ICRTSET-2022, PSG College, Coimbatore</li>
+    <li><strong>Invited Lecture</strong> – Nanomaterials Conference, MG University, Kottayam (2022)</li>
+    <li><strong>Poster Presentations</strong> – KM Cariappa College (2020), AIET Mijar (2019)</li>
+  </ul>
+
+  <h3>Technical Skills</h3>
+  <p><strong>Software:</strong> Athena, Artemis, ImageJ, Origin, Larch</p>
+  <p><strong>Analysis:</strong> XAS, SEM, TEM, XPS, XRD, Raman, PL, UV</p>
+  <p><strong>Instrumentation:</strong> Potentiostat, AFM, PEM/SOFC test station, BET analyzer, EIS analyzer</p>
+
+  <h3>Scholarships and Awards</h3>
+  <ul>
+    <li><strong>INSPIRE (SHE) Scholarship</strong> (2018)<br>
+    Awarded by DST, Govt. of India for top 2% students in Natural Sciences</li>
+  </ul>
+
+  <h3>Other Activities</h3>
+  <ul>
+    <li>Research Volunteer – Centre for Academic and Professional Support, Christ University (2020)</li>
+    <li>Coursera: Understanding Research Methods – SOAS, University of London (2020)</li>
+    <li>Business English Certificate (BEC) Vantage – Cambridge English (2019)</li>
+    <li>18th State-level Children Science Congress, Bengaluru (2011)</li>
+    <li>Karnataka Junior Grade – Vocal Music and Bharatanatyam (2010–2011)</li>
+  </ul>
+</div>
+
+</body>
+</html>
