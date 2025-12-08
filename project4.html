@@ -53,112 +53,105 @@
   <h1>X-ray Absorption Spectroscopy</h1>
   
   <div class="project-meta">
-    <strong>Duration:</strong> 2020 - Present | <strong>Field:</strong> Characterization, Synchrotron Science
+    <strong>Duration:</strong> 2023 - Present | <strong>Field:</strong> Characterization, Spectroscopy
   </div>
 
-  <img src="project4.jpg" alt="X-ray Absorption Spectroscopy" class="project-image-main">
-<!--
+  <img src="project4.jpg" alt="" class="project-image-main">
+
   <h2>Project Overview</h2>
   <p>
-    This project focuses on utilizing advanced X-ray absorption spectroscopy (XAS) techniques including 
-    X-ray Absorption Near Edge Structure (XANES) and Extended X-ray Absorption Fine Structure (EXAFS) 
-    to investigate the electronic and geometric structure of catalytic materials. These synchrotron-based 
-    techniques provide element-specific information crucial for understanding catalytic mechanisms.
+    This project uses X‑ray Absorption Spectroscopy (XAS) to uncover how catalytic materials function at the atomic scale in energy conversion reactions such as hydrogen evolution reaction (HER) and oxygen reduction reaction (ORR). XAS allows the local structure and electronic state of specific elements in complex oxides and nanomaterials to be tracked while the catalyst is operating, revealing which sites are active, how they change under bias or illumination, and why some materials are more stable or selective than others.
   </p>
 
-  <h2>Research Focus</h2>
-  <ul>
-    <li>Determination of oxidation states and coordination environments in catalysts</li>
-    <li>In-situ and operando studies of catalysts under reaction conditions</li>
-    <li>Investigation of structure-activity relationships at the atomic level</li>
-    <li>Time-resolved XAS for studying dynamic catalytic processes</li>
-  </ul>
+  
 
-  <h2>Technical Capabilities</h2>
-  <h3>XANES Analysis</h3>
+  <section class="xas-explainer">
+    <h2>X-ray Absorption Spectroscopy (XAS)</h2>
+    <p>XAS is divided into two complementary regimes that probe different aspects of the local environment around an absorbing atom.</p>
+    <p><strong style="color: #1a3d7c;">XANES</strong>: X-ray Absorption Near-Edge Spectroscopy</p>
+    <p><strong style="color: #c62828;">EXAFS</strong>: Extended X-ray Absorption Fine-Structure</p>
+
+    <div class="xas-grid" style="display: flex; flex-direction: column; gap: 15px; margin: 20px 0;">
+      <div class="xas-box xanes" style="background-color: #c5cae9; border-left: 5px solid #5c6bc0; padding: 15px 20px; border-radius: 8px;">
+        <span style="color: #3f51b5; font-weight: bold; font-size: 1.1em;">XANES</span>
+        <span style="font-size: 0.95em;"> : transitions to unfilled bound states, nearly bound states, continuum - <strong style="color: #3f51b5;">low energy photoelectrons</strong></span>
+      </div>
+
+      <div class="xas-box exafs" style="background-color: #ffcdd2; border-left: 5px solid #e57373; padding: 15px 20px; border-radius: 8px;">
+        <span style="color: #d32f2f; font-weight: bold; font-size: 1.1em;">EXAFS</span>
+        <span style="font-size: 0.95em;"> : ~ 50 – 1000 eV from edge, transitions to continuum – <strong style="color: #d32f2f;">high energy photoelectrons</strong></span>
+      </div>
+    </div>
+
+    <figure class="xas-figure" style="text-align: center;">
+      <img src="xas_2.png" alt="Example XAS spectrum showing XANES and EXAFS regions" style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
+      <figcaption>Example XAS spectrum highlighting XANES and EXAFS regions.</figcaption>
+      <p style="color: #888; font-size: 0.9em; margin-top: 5px;">Image credit: Pascarelli, S., Presented at the Summer School, ESRF, Grenoble, (2016)</p>
+    </figure>
+  </section>
+  <h3>Why XAS?</h3>
   <p>
-    X-ray Absorption Near Edge Structure provides information about the oxidation state, coordination 
-    geometry, and electronic configuration of absorbing atoms. Linear combination fitting and 
-    pre-edge feature analysis reveal the local symmetry and electronic structure changes during 
-    catalytic reactions.
+    XAS is an element specific probe that measures how atoms absorb tunable X‑rays as a function of energy, providing direct information on oxidation state, coordination environment, and metal–ligand bonding. Near‑edge XANES features are sensitive to electronic structure and spin state, while the EXAFS region encodes quantitative details about coordination number and interatomic distances, giving complementary "electronic" and "geometric" views of the same active site. Together, XANES and EXAFS link atomic‑scale structure to catalytic performance in situ and operando, making XAS a uniquely powerful tool for designing more active, durable catalysts.
   </p>
 
-  <h3>EXAFS Analysis</h3>
-  <p>
-    Extended X-ray Absorption Fine Structure yields quantitative information about interatomic 
-    distances, coordination numbers, and disorder in the local environment around the absorbing 
-    atom. Shell-by-shell fitting provides atomic-resolution structural parameters.
-  </p>
-
-  <div class="highlight-box">
-    <strong>Major Discovery:</strong> In-situ XAS measurements revealed that active catalytic sites 
-    undergo reversible oxidation state changes during the reaction cycle, challenging previous 
-    assumptions about the nature of the active phase.
+  <div style="text-align: center; margin: 30px 0;">
+    <button onclick="openPresentationModal()" style="background: linear-gradient(90deg, #F39C12, #F5B300); color: #6B3E0B; border: none; padding: 12px 30px; font-size: 16px; font-weight: 600; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform 0.2s;">
+      📊 View XAS Presentation
+    </button>
   </div>
 
-  <h2>Experimental Methodology</h2>
-  <h3>Beamline Access</h3>
-  <p>
-    Experiments are conducted at international synchrotron facilities including:
-  </p>
+  <!-- Modal for PDF Viewer -->
+  <div id="presentationModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8);">
+    <div style="position: relative; margin: 2% auto; width: 90%; max-width: 1200px; height: 90vh; background-color: white; border-radius: 10px; overflow: hidden;">
+      <span onclick="closePresentationModal()" style="position: absolute; top: 10px; right: 20px; color: #666; font-size: 35px; font-weight: bold; cursor: pointer; z-index: 10000;">&times;</span>
+      <iframe id="pdfViewer" src="xas_presentation.pdf" style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
+  </div>
+
+  <script>
+    function openPresentationModal() {
+      document.getElementById('presentationModal').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closePresentationModal() {
+      document.getElementById('presentationModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      var modal = document.getElementById('presentationModal');
+      if (event.target == modal) {
+        closePresentationModal();
+      }
+    }
+  </script>
+
+  
+  <h2>Beamlines & Facilities Visited</h2>
   <ul>
-    <li>ELETTRA Synchrotron Light Source (Italy)</li>
-    <li>European Synchrotron Radiation Facility - ESRF (France)</li>
-    <li>Diamond Light Source (UK)</li>
-    <li>Advanced Photon Source - APS (USA)</li>
+    <li><strong>ESRF BM08 (Grenoble, France)</strong> – Ex-Situ XAS, operando electrochemical cells| 2024-2025</li>
+    
   </ul>
 
-  <h3>Sample Environments</h3>
-  <p>
-    Custom-designed electrochemical cells enable operando XAS measurements under realistic operating 
-    conditions. This allows direct observation of structural changes occurring at the catalyst surface 
-    during electrochemical reactions, bridging the gap between model systems and practical applications.
-  </p>
-
-  <h2>Data Analysis & Interpretation</h2>
-  <p>
-    Advanced data processing includes background removal, normalization, and Fourier transformation. 
-    Theoretical calculations using FEFF code complement experimental data and aid in peak assignment. 
-    Multivariate analysis techniques such as Principal Component Analysis (PCA) and Iterative Target 
-    Transformation (ITT) help identify and quantify multiple species present during catalytic reactions.
-  </p>
-
-  <h3>Key Findings</h3>
+  <h2>Data Analysis & Software</h2>
   <ul>
-    <li>Identification of catalytically active metal oxidation states in working catalysts</li>
-    <li>Discovery of metal-support interactions affecting catalyst stability</li>
-    <li>Observation of surface reconstruction phenomena under reaction conditions</li>
-    <li>Correlation between local structure and catalytic activity metrics</li>
+    <li><strong>Athena/Artemis (Demeter)</strong> – Preprocessing, normalization and EXAFS fitting.</li>
+    <li><strong>Larch / XAS Python Tools</strong> – Scripting, batch processing, and custom fitting routines.</li>
+    <li><strong>FEFF</strong> – Theoretical EXAFS spectra generation and ab initio scattering calculations.</li>
   </ul>
 
-  <h2>Impact & Applications</h2>
-  <p>
-    The insights gained from XAS studies enable rational design of improved catalysts with:
-  </p>
+  <h2>Selected Proposals & Beamtime</h2>
   <ul>
-    <li>Enhanced activity through optimized metal oxidation states</li>
-    <li>Improved stability via structural modifications</li>
-    <li>Better selectivity through controlled coordination environments</li>
-    <li>Fundamental understanding guiding computational catalyst design</li>
+    <li><strong style="color: #483514;">ESRF, BM08 | 2024</strong> – Metal sites in state-of-the-art carbon nitride based low-Pt electrocatalyst for low temperature fuel cell. (<em>User</em>)</li>
+    <li><strong style="color: #483514;">ESRF, BM08 | 2024</strong> – EXAFS study of Sn-doped hematite nanostructured films for water splitting (<em>User</em>)</li>
+    <li><strong style="color: #483514;">ESRF, BM08 | 2025</strong> – Mo site in MoOxSy cathodes in form of thin films during hydrogen evolution reaction. (<em>Co-Investigator</em>)</li>
+    <li><strong style="color: #483514;">SOLEIL, SAMBA | 2026</strong> – Ageing upon cycling of advanced carbon nitride-based low-Pt electrocatalyst for low temperature fuel cell. (<em>Principal Investigator</em>)</li>
+    <li><strong style="color: #483514;">ESRF, BM08 | 2026</strong> – Unveiling the local structural change upon activation and cycling-induced ageing of carbon nitride-based Pt-Ni electrocatalyst for low temperature fuel cell. (<em>Principal Investigator</em>)</li>
   </ul>
 
-  <h3>Recent Publications</h3>
-  <ul>
-    <li>W.N. et al. (2024). "Operando XAS Study of Oxygen Evolution Catalysts." 
-        <em>Journal of the American Chemical Society</em>, 146, 8765-8779.</li>
-    <li>W.N. et al. (2023). "Electronic Structure of Transition Metal Catalysts Revealed by XANES." 
-        <em>Physical Chemistry Chemical Physics</em>, 25, 12345-12358.</li>
-    <li>W.N. et al. (2022). "In-situ EXAFS Investigation of Catalyst Dynamics." 
-        <em>Chemical Science</em>, 13, 9876-9890.</li>
-  </ul>
 
-  <h2>Training & Collaboration</h2>
-  <p>
-    This project involves extensive collaboration with beamline scientists and computational researchers 
-    worldwide. Regular beamtime proposals and international conferences facilitate knowledge exchange 
-    and advance the field of operando spectroscopy for energy materials.
-  </p>
--->
 </div>
 
 </body>

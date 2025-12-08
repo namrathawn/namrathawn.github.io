@@ -50,17 +50,101 @@
       transform: translateY(-2px);
     }
 
+    /* Layout wrapper */
+    .cv-wrapper {
+      display: flex;
+      max-width: 1200px;
+      margin: 40px auto 40px;
+      gap: 30px;
+      padding: 0 20px;
+      min-height: calc(100vh - 160px);
+    }
+
+    /* Sidebar navigation */
+    .cv-sidebar {
+      width: 250px;
+      position: sticky;
+      top: 80px;
+      height: calc(100vh - 160px);
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      padding: 25px 20px;
+      box-shadow: 0 10px 30px rgba(243, 156, 18, 0.15);
+      border: 2px solid rgba(245, 179, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .cv-sidebar h4 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px;
+      color: #792f0f;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .cv-sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .cv-sidebar li {
+      margin-bottom: 8px;
+    }
+
+    .cv-sidebar a {
+      display: block;
+      padding: 10px 12px;
+      color: #666;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: all 0.3s;
+      font-size: 13.5px;
+      line-height: 1.3;
+    }
+
+    .cv-sidebar a:hover {
+      background: rgba(243, 156, 18, 0.1);
+      color: #F39C12;
+      transform: translateX(5px);
+    }
+
+    .cv-sidebar a.active {
+      background: linear-gradient(90deg, #F39C12, #F5B300);
+      color: #6B3E0B;
+      font-weight: 600;
+    }
+
     /* Content container with scroll */
     .cv-container {
-      max-width: 900px;
-      margin: 40px auto;
+      flex: 1;
       padding: 50px 60px;
       background: rgba(255, 255, 255, 0.98);
       border-radius: 22px;
       box-shadow: 0 20px 50px rgba(243, 156, 18, 0.18);
       border: 3px solid rgba(245, 179, 0, 0.35);
-      max-height: calc(100vh - 120px);
+      height: calc(100vh - 160px);
       overflow-y: auto;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .cv-wrapper {
+        flex-direction: column;
+      }
+      
+      .cv-sidebar {
+        position: relative;
+        top: 0;
+        width: 100%;
+      }
+      
+      .cv-container {
+        padding: 30px 20px;
+      }
     }
 
     /* Custom scrollbar */
@@ -199,25 +283,43 @@
   </div>
 </nav>
 
-<div class="cv-container">
-  <h2>Namratha W.N.</h2>
-  <div class="contact-info">
-    📧 wn.namratha@gmail.com
-  </div>
-  
-  <a href="Namratha_CV.pdf" class="download-btn" download>📥 Download Full CV (PDF)</a>
+<div class="cv-wrapper">
+  <!-- Sidebar Navigation -->
+  <aside class="cv-sidebar">
+    <h4>Quick Links</h4>
+    <ul>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Professional Experience</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#patents">Patents</a></li>
+      <li><a href="#research">Research Experience</a></li>
+      <li><a href="#conferences">Conferences & Workshops</a></li>
+      <li><a href="#skills">Technical Skills</a></li>
+      <li><a href="#awards">Scholarships & Awards</a></li>
+      <li><a href="#activities">Other Activities</a></li>
+    </ul>
+  </aside>
 
-  <h3>Education</h3>
+  <!-- Main Content -->
+  <div class="cv-container">
+    <h2>Namratha W.N.</h2>
+    <div class="contact-info">
+      📧 wn.namratha@gmail.com
+    </div>
+    
+    <a href="Namratha_CV.pdf" class="download-btn" download>📥 Download Full CV (PDF)</a>
+
+    <h3 id="education">Education</h3>
   <ul>
     <li>
       <span class="institution">University of Padova</span> (Padova, Italy)<br>
       <span class="degree">PhD in Physics</span> <span class="date">(Oct 2023 – Present)</span><br>
-      Focus: Functional oxides for green hydrogen production using synchrotron techniques
+      Focus: Functional oxides for green hydrogen production using synchrotron techniques.
     </li>
     <li>
       <span class="institution">Christ Deemed to be University</span> (Bengaluru, India)<br>
       <span class="degree">M.Sc. in Physics (Material Science Specialization)</span> <span class="date">(2020 – 2022)</span><br>
-      Thesis Supervisor: Dr. Manoj Balachandran
+      Thesis Supervisor: Dr. Manoj Balachandran.
     </li>
     <li>
       <span class="institution">Alva's College</span> (Moodbidri, India)<br>
@@ -226,82 +328,134 @@
     </li>
   </ul>
 
-  <h3>Professional Experience</h3>
+  <h3 id="experience">Professional Experience</h3>
   <ul>
     <li>
       <strong>Project Research Assistant</strong> <span class="date">(Oct 2022 – Aug 2023)</span><br>
       Combustion, Gasification and Propulsion Laboratory (CGPL)<br>
-      Indian Institute of Science (Bengaluru, India)
+      Indian Institute of Science (Bengaluru, India).
     </li>
   </ul>
 
-  <h3>Publications</h3>
+  <h3 id="publications">Publications</h3>
   <ul>
-    <li>Namratha, W. N. et al. (2024). "Titania-doped CDs as effective CT-DNA binders: A novel fluorescent probe via green synthesis." <em>Particle & Particle Systems Characterization</em>.</li>
+    <li>Namratha, W. N. et al. <span class="date">(2024)</span>. "Titania-doped CDs as effective CT-DNA binders: A novel fluorescent probe via green synthesis." <em>Particle & Particle Systems Characterization</em>.</li>
     
-    <li>Sreehari, K.S., Namratha, W.N. et al. (2022). "Toxic heavy metal ion detection by fluorescent nanocarbon sensor derived from a medicinal plant." <em>Results in Chemistry</em>.</li>
+    <li>Sreehari, K.S., Namratha, W.N. et al. <span class="date">(2022)</span>. "Toxic heavy metal ion detection by fluorescent nanocarbon sensor derived from a medicinal plant." <em>Results in Chemistry</em>.</li>
     
-    <li>Satheeshchandra, S.; Namratha, W.N. et al. (2020). "Novel methyl furan-based chalcone material for potential nonlinear optical applications." <em>Materials Today: Proceedings</em>.</li>
+    <li>Satheeshchandra, S.; Namratha, W.N. et al. <span class="date">(2020)</span>. "Novel methyl furan-based chalcone material for potential nonlinear optical applications." <em>Materials Today: Proceedings</em>.</li>
     
-    <li>Satheeshchandra, S.; Namratha, W.N. et al. (2020). "Third-order nonlinear optical properties of novel furan-based organic crystal." <em>Materials Today: Proceedings</em>.</li>
-    
-    <li>Suhana et al., Namratha, W.N. et al. (2025). "Exploring the Potential of Ni-Ru MOFs for Overall Water-Splitting Applications." <em>(Manuscript in preparation)</em></li>
+    <li>Satheeshchandra, S.; Namratha, W.N. et al. <span class="date">(2020)</span>. "Third-order nonlinear optical properties of novel furan-based organic crystal." <em>Materials Today: Proceedings</em>.</li>
   </ul>
 
-  <h3>Patents</h3>
+  <h3 id="patents">Patents</h3>
   <ul>
     <li><strong>A process of synthesizing novel methyl substituted chalcone molecules – potential cancer inhibitors</strong><br>
-    Patent No. 201941046359, India (2019)</li>
+    Patent No. 201941046359, India <span class="date">(2019)</span></li>
   </ul>
 
-  <h3>Research Experience</h3>
+  <h3 id="research">Research Experience</h3>
   <ul>
-    <li><strong>X-ray Absorption Spectroscopy</strong> – University of Padova (2023–Present)<br>
-    Study of functional nanomaterials by synchrotron studies. Guide: Assoc. Prof. Chiara Maurizio</li>
+    <li><strong>X-ray Absorption Spectroscopy</strong> – University of Padova <span class="date">(2023–Present)</span><br>
+    Study of functional nanomaterials by synchrotron studies. Guide: Assoc. Prof. Chiara Maurizio.</li>
     
-    <li><strong>Project Assistant</strong> – CGPL, IISc, Bengaluru (2022–2023)<br>
-    Biomass derived hydrogen testing and fuel cell operation. Guide: Dr. Anand Shivpuji</li>
+    <li><strong>Project Assistant</strong> – CGPL, IISc, Bengaluru <span class="date">(2022–2023)</span><br>
+    Biomass derived hydrogen testing and fuel cell operation. Guide: Dr. Anand Shivpuji.</li>
     
-    <li><strong>Carbon Nanomaterials from Biomass</strong> – Christ University (2021–2022)<br>
-    Optical and electrochemical properties. Guide: Dr. Manoj B.</li>
+    <li><strong>Carbon Nanomaterials from Biomass</strong> – Christ University <span class="date">(2021–2022)</span><br>
+    Optical and electrochemical properties. Guide: Dr. Manoj B..</li>
     
-    <li><strong>Research Internship</strong> – AIET (2019)<br>
-    Role of Catalyst and catalytic activity in hydrogen fuel cell. Guides: Dr. Richard Pinto & Dr. Jayram A.</li>
+    <li><strong>Research Internship</strong> – AIET <span class="date">(April-May 2019)</span><br>
+    Role of Catalyst and catalytic activity in hydrogen fuel cell. Guides: Dr. Richard Pinto & Dr. Jayram A..</li>
     
-    <li><strong>Research Internship</strong> – AIET (2019)<br>
-    Synthesis and characterization of furan-based Chalcone derivatives. Guides: Dr. Richard Pinto & Dr. Jayram A.</li>
+    <li><strong>Research Internship</strong> – AIET <span class="date">(December 2019)</span><br>
+    Synthesis and characterization of furan-based Chalcone derivatives. Guides: Dr. Richard Pinto & Dr. Jayram A..</li>
   </ul>
 
-  <h3>Conferences and Workshops</h3>
+  <h3 id="conferences">Conferences and Workshops</h3>
   <ul>
-    <li><strong>International School of Electrocatalysis 2025 (ISECAT2025)</strong><br>
-    23rd – 25th July 2025, Padova, Italy</li>
-    <li><strong>Best Poster</strong> – Advanced Materials Workshop, University of L'Aquila, Italy (2024)</li>
-    <li><strong>Best Paper</strong> – ICRTSET-2022, PSG College, Coimbatore</li>
-    <li><strong>Invited Lecture</strong> – Nanomaterials Conference, MG University, Kottayam (2022)</li>
-    <li><strong>Poster Presentations</strong> – KM Cariappa College (2020), AIET Mijar (2019)</li>
+    <li>Presented a <strong>flash presentation</strong> in <em>'1st International Workshop on Photoelectrochemical Approaches to Sustainable Chemicals'</em> (PECS-25) at the Institute of Advanced Materials (INAM), Universitat Jaume I in Castelló, Spain <span class="date">(2025)</span>.</li>
+    
+    <li>Participated in <strong>International School of Electrocatalysis 2025 (ISECAT2025)</strong> organized by DII UNIPD, Padova, Italy <span class="date">(2025)</span>.</li>
+    
+    <li><strong>Best paper award</strong> in the <em>'International Conference on Recent Trends in Science, Engineering & Technology'</em> (ICRTSET-2022) organized by PSG College of Arts & Science, Coimbatore, India <span class="date">(2022)</span>.</li>
+    
+    <li><strong>Short Invited Lecture</strong> in the <em>'International Online Conference on Nano materials'</em> organized by Mahathma Gandhi University, Kottayam, Kerala, India <span class="date">(2022)</span>.</li>
+    
+    <li><strong>Poster presentation</strong> in the <em>'National level Conference on Recent Novel Approaches in Chemical Sciences'</em>, Field Marshal KM Cariappa college, Madikeri <span class="date">(2020)</span>.</li>
+    
+    <li><strong>Poster presentation</strong> in the <em>'International conference on Laser Deposition' (i COLD-2019)</em> organized by AIET, Mijar <span class="date">(2019)</span>.</li>
   </ul>
 
-  <h3>Technical Skills</h3>
-  <p><strong>Software:</strong> Athena, Artemis, ImageJ, Origin, Larch</p>
-  <p><strong>Analysis:</strong> XAS, SEM, TEM, XPS, XRD, Raman, PL, UV</p>
-  <p><strong>Instrumentation:</strong> Potentiostat, AFM, PEM/SOFC test station, BET analyzer, EIS analyzer</p>
+  <h3 id="skills">Technical Skills</h3>
+  <p><strong>Software:</strong> Athena, Artemis, ImageJ, Origin, Larch.</p>
+  <p><strong>Analysis:</strong> XAS, SEM, TEM, XPS, XRD, Raman, PL, UV.</p>
+  <p><strong>Instrumentation:</strong> Potentiostat, AFM, PEM/SOFC test station, BET analyzer, EIS analyzer.</p>
 
-  <h3>Scholarships and Awards</h3>
+  <h3 id="awards">Scholarships and Awards</h3>
   <ul>
-    <li><strong>INSPIRE (SHE) Scholarship</strong> (2018)<br>
-    Awarded by DST, Govt. of India for top 2% students in Natural Sciences</li>
+    <li><strong>INSPIRE (SHE) Scholarship</strong> <span class="date">(2018)</span><br>
+    Awarded by DST, Govt. of India for top 2% students in Natural Sciences.</li>
   </ul>
 
-  <h3>Other Activities</h3>
+  <h3 id="activities">Other Activities</h3>
   <ul>
-    <li>Research Volunteer – Centre for Academic and Professional Support, Christ University (2020)</li>
-    <li>Coursera: Understanding Research Methods – SOAS, University of London (2020)</li>
-    <li>Business English Certificate (BEC) Vantage – Cambridge English (2019)</li>
-    <li>18th State-level Children Science Congress, Bengaluru (2011)</li>
-    <li>Karnataka Junior Grade – Vocal Music and Bharatanatyam (2010–2011)</li>
+    <li>Recognition as <strong>a research volunteer at the Centre for Academic and Professional Support</strong> at Christ (Deemed to be University), Bengaluru <span class="date">(2020)</span>.</li>
+    
+    <li><strong>'Understanding Research Methods'</strong> an online non-credit course authorized by the University of London and SOAS University of London offered through Coursera <span class="date">(2020)</span>.</li>
+    
+    <li>Awarded <strong>grade C in the Business English Certificate (BEC) Vantage</strong>, certified by Cambridge English <span class="date">(2019)</span>.</li>
+    
+    <li>Presented a project in the <strong>18<sup>th</sup> state-level Children Science Congress</strong>, organized by KVP, Bengaluru <span class="date">(2011)</span>.</li>
+    
+    <li><strong>Karnataka music - Junior Grade Vocal and Bharatanatyam - Junior Grade</strong>, Karnataka Secondary Education Examination Board <span class="date">(2010-2011)</span>.</li>
   </ul>
+  </div>
 </div>
+
+<script>
+  // Smooth scrolling for sidebar links
+  document.querySelectorAll('.cv-sidebar a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      const container = document.querySelector('.cv-container');
+      
+      // Scroll the container to the target section
+      const targetPosition = target.offsetTop - container.offsetTop - 20;
+      container.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+      
+      // Update active state
+      document.querySelectorAll('.cv-sidebar a').forEach(link => link.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  // Highlight active section on scroll
+  const container = document.querySelector('.cv-container');
+  const sections = document.querySelectorAll('h3[id]');
+  const navLinks = document.querySelectorAll('.cv-sidebar a');
+
+  container.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - container.offsetTop;
+      if (container.scrollTop >= sectionTop - 100) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
