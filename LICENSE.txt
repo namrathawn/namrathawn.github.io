@@ -1,3 +1,6 @@
+Site content (text and images) © 2025 Namratha W. N. The site was originally inspired by a theme by Vasilios Mavroudis (BSD license), but the current codebase has been fully rewritten by Namratha W. N.
+
+
 Copyright (c) 2016, Vasilios Mavroudis
 All rights reserved.
 
